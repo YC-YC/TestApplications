@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.example.bigapps"
+    android:id="@+id/itemlayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="10dp"
+    android:background="@drawable/item_click_selector"
+    android:orientation="vertical" >
+
+    <RelativeLayout 
+        android:layout_width="@dimen/item_width"
+        android:layout_height="@dimen/item_width"
+        android:gravity="center"
+        >
+        
+    <!-- <ImageView
+        android:id="@+id/ItemImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/head">
+    </ImageView> -->
+    <com.example.bigapps.customview.CustomImageView
+        android:id="@+id/ItemImage"
+        android:layout_width="@dimen/item_width"
+        android:layout_height="@dimen/item_width"
+        custom:src="@drawable/head"
+        custom:type="circle">
+    </com.example.bigapps.customview.CustomImageView>
+    <ImageView
+        android:id="@+id/ItemPlayPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/item_play_selector" >
+    </ImageView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvCity"
+        android:layout_width="@dimen/item_width"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:duplicateParentState="true"
+        android:text="Title"
+        android:textColor="@color/itemtextcolor" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvCode"
+        android:layout_width="@dimen/item_width"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:duplicateParentState="true"
+        android:text="Info"
+        android:textSize="25sp"
+        android:singleLine="true"
+        android:textColor="@color/itemtextcolor" >
+    </TextView>
+
+</LinearLayout>

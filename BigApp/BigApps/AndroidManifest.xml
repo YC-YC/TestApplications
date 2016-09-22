@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bigapps"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+        <activity
+            android:name="com.example.bigapps.LaunchActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.bigapps.MainActivity" >
+        </activity>
+        <activity android:name="com.example.bigapps.testviewpager.MainViewPager" />
+        <activity android:name="com.example.bigapps.testviewpager.MainViewPager2" />
+        <activity android:name="com.example.bigapps.circlemenu.CircleActivity" />
+        <activity android:name="com.example.bigapps.slidedel.SlideDelActivity" />
+        <activity android:name="com.example.bigapps.horizonlist.HorizonListActivity" />
+        <activity android:name="com.example.bigapps.horizonlist.HorizonListActivity2" />
+        <activity android:name="com.example.bigapps.horizonlist.HorizonListActivity3" />
+        <activity android:name="com.example.bigapps.customview.CustomImageViewActivity" />
+        <activity android:name="com.example.bigapps.horizonlist.TestActivity" />
+        <activity android:name="com.example.download.DownloadActivity" />
+        <activity android:name="com.example.bigapps.floding.MainFlodingActivity" />
+
+        <service android:name="com.example.download.services.DownloadService" />
+
+        <activity android:name="com.example.bigapps.customview.SwipeActivity" >
+        </activity>
+        <activity android:name="com.example.bigapps.wheel.WheelActivity" />
+        <activity android:name="com.example.bigapps.picasso.PicassoActivity" />
+        <activity android:name="com.example.bigapps.progressbar.MainTestProgressbar" />
+        <activity android:name="com.example.bigapps.verticalseekbar.VerticalSeekBarActivity" />
+        <activity android:name="com.example.bigapps.recyclerview.RecyclerViewActivity" />
+        <activity android:name="com.example.drawer.DrawerLayoutActivity" />
+        <activity android:name="com.example.drawer.SlidingDrawerActivity" />
+        <activity android:name="com.example.saver.MainPreferenceActivity" />
+        <activity android:name="com.example.saver.MainOpenFileActivity" />
+    </application>
+
+</manifest>
