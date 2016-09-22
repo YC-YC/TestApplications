@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Resources</string>
+    <string name="socket_server">服务端</string>
+    <string name="socket_client1">客户端1</string>
+    <string name="socket_client2">客户端2</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>

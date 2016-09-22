@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.resources"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+
+    <!-- 网络访问权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- wifi -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.MainActivity" >
+        <!-- android:theme="@style/ThemeActivity" 动画切换-->
+ <!-- 自定义动画切换 -->
+        <activity
+            android:name="com.example.resources.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.resources.ResourceActivity" >
+        </activity>
+        <activity android:name="com.example.resources.AnimationActivity" >
+        </activity>
+        <activity android:name="com.example.resources.ReflectActivity" >
+        </activity>
+        <activity android:name="com.example.resources.ContentResolveActivity" >
+        </activity>
+        <activity android:name="com.example.resources.popupwin.PopupWindowActivity" >
+        </activity>
+        <activity android:name="com.example.resources.drawpic.DrawActivity" >
+        </activity>
+        <activity android:name="com.example.resources.drawable.ButtonState" >
+        </activity>
+        <activity android:name="com.example.resources.drawable.Clip" >
+        </activity>
+        <activity android:name="com.example.resources.drawable.CrossFade" >
+        </activity>
+        <activity android:name="com.example.resources.drawable.Inset" >
+        </activity>
+        <activity android:name="com.example.resources.drawable.Layer" >
+        </activity>
+        <activity android:name="com.example.resources.drawable.Level" >
+        </activity>
+        <activity android:name="com.example.resources.drawable.Shape" >
+        </activity>
+       
+        <!-- 服务器 -->
+        <activity
+            android:name="com.example.resources.socket.ServerActivity"
+            android:label="@string/socket_server"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 客户端1 -->
+        <activity
+            android:name="com.example.resources.socket.Client1Activity"
+            android:label="@string/socket_client1"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 客户端2 android:launchMode="singleInstance"为可多个 -->
+        <activity
+            android:name="com.example.resources.socket.Client2Activity"
+            android:label="@string/socket_client2"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 自定义ViewGroup -->
+        <activity android:name="com.example.resources.view.CustomActivity1" >
+        </activity>
+        <activity android:name="com.example.resources.view.CustomActivity2" >
+        </activity>
+        <activity android:name="com.example.resources.view.CustomActivity3" >
+        </activity>
+         <activity android:name="com.example.resources.view.CustomActivity4" >
+        </activity>
+
+         <activity android:name="com.example.customview.CustomTextViewActivity" >
+        </activity>
+        
+         <activity android:name="com.example.resources.ExpandListActivity" >
+        </activity>
+        
+          <activity android:name="com.example.draghelper.ViewDragHelperActivity" >
+        </activity>
+         <activity android:name="com.example.resources.scroller.ScrollActivity" >
+        </activity>
+         <activity android:name="com.example.resources.text.TextViewLinkActivity" >
+        </activity>
+  
+        <!-- 自定义ContentProvider -->
+        <provider
+            android:name="com.example.resources.provider.PersonContentProvider"
+            android:authorities="com.example.resources.PersonContentProvider" >
+        </provider>
+        
+        <receiver android:name="com.example.resources.receiver.AdminReceiver"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+	                android:name="android.app.device_admin"
+	                android:resource="@xml/lockourscreen"/>
+	            <intent-filter>
+	                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+	            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
