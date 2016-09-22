@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.testdemo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="18" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <!-- <permission android:name="com.example.testdemo.appshare.permission.SAY_HELLO"/>
+    <uses-permission android:name="com.example.testdemo.appshare.permission.SAY_HELLO"/> -->
+
+    <!-- 自定义application -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    
+    <!-- 需求属性 -->
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
+    
+<!-- bugly添加权限  -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name="com.example.testdemo.appshare.App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.testdemo.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.testdemo.appshare.Main2"
+            android:label="@string/app_name2" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.example.testdemo.first.listview.ListViewActivity"></activity>
+        <activity android:name="com.example.testdemo.first.picker.PickerActivity"></activity>
+        <activity android:name="com.example.testdemo.first.gridview.GridViewActivity"></activity>
+        <activity android:name="com.example.testdemo.first.base.SpinnerActivity"></activity>
+        <activity android:name="com.example.testdemo.first.base.ProgressActivity"></activity>
+        <activity android:name="com.example.testdemo.first.base.SeekBarActivity"></activity>
+        <activity android:name="com.example.testdemo.first.base.WebViewActivity"></activity>
+        <activity android:name="com.example.testdemo.second.dialog.DialogActivity"></activity>
+        <activity android:name="com.example.testdemo.second.toast.ToastActivity"></activity>
+        <activity android:name="com.example.testdemo.second.notify.NotifyActivity"></activity>
+        <activity android:name="com.example.testdemo.second.menu.ContextMenuActivity"></activity>
+        <activity android:name="com.example.testdemo.second.menu.MenuActivity"></activity>
+        <activity android:name="com.example.testdemo.second.menu.OptionMenuActivity"></activity>
+        <activity android:name="com.example.testdemo.second.menu.SubMenuActivity"></activity>
+        <activity android:name="com.example.testdemo.second.base.StaticFragmentActivity"></activity>
+        <activity android:name="com.example.testdemo.second.base.DynamicFragmentActivity"></activity>
+        <activity android:name="com.example.testdemo.second.base.ViewFlipperActivity"></activity>
+        <activity android:name="com.example.testdemo.second.base.GalleryActivity"></activity>
+        <activity android:name="com.example.testdemo.third.base.SharedPreferenceActivity"></activity>
+        <activity android:name="com.example.testdemo.third.base.SQLiteActivity"></activity>
+        <activity android:name="com.example.file.FileActivity"></activity>
+        <activity android:name="com.example.list.ListActivity"></activity>
+        <activity android:name="com.example.customerview.CustomActivity"></activity>
+        <activity android:name="com.example.slidingMenu.SlidingActivity"></activity>
+        <activity android:name="com.example.arcmenu.ArmMenuActivity"></activity>
+        <activity android:name="com.example.treeview.TreeView"></activity>
+        <activity android:name="com.example.flowlayout.FlowLayoutActivity"></activity>
+        <activity android:name="com.example.luckypan.LuckyPanActivity"></activity>
+        <activity android:name="com.example.recylerview.RecyclerActivity"></activity>
+        <activity android:name="com.example.guaguaka.GuaGuaActivity"></activity>
+        <activity android:name="com.example.testdemo.cpp.CppActivity"></activity>
+       
+        
+       <!--  可通过本地浏览器启动
+       	<intent-filter>
+                <action android:name="com.example.testdemo.appshare.Main1" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="app"/>
+            </intent-filter> -->
+        <!-- 应用添加权限 android:permission="com.example.testdemo.appshare.permission.SAY_HELLO"> -->
+        <activity android:name="com.example.testdemo.appshare.Main1"
+            android:exported="false" 
+            android:permission="com.example.testdemo.appshare.permission.SAY_HELLO">
+            <intent-filter>
+                <action android:name="com.example.testdemo.appshare.Main1" />
+                <action android:name="android.intent.action.VIEW"/>                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="app"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Media.MediaActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"></activity>
+    	 <activity android:name="com.example.testdemo.Media.VideoViewActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"></activity>
+    	 <service android:name=".floatview.FloatService"></service>
+    	 <activity android:name=".floatview.FloatView"></activity>
+    	 <activity android:name=".sensor.SensorActivity"></activity>
+    	 <activity android:name=".dictionary.DictionaryActivity"></activity>
+    	
+    	 <activity android:name="com.example.testdemo.flashing.FlashLightMainActivity"
+    	     android:screenOrientation="portrait"
+    	     android:theme="@style/FlashLightTheme"></activity>
+    </application>
+
+</manifest>

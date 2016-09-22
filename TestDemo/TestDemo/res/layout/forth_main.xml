@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/for_button1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ListView下拉刷新，上拉加载" />
+
+            <Button
+                android:id="@+id/for_button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="自定义View" />
+
+            <Button
+                android:id="@+id/for_button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="侧滑菜单" />
+
+            <Button
+                android:id="@+id/for_button4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="卫星菜单" />
+
+            <Button
+                android:id="@+id/for_button5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="树形" />
+            
+            <Button
+                android:id="@+id/for_button6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="流式布局" />
+
+            <Button
+                android:id="@+id/for_button7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SurfaceView实现转盘" />
+            <Button
+                android:id="@+id/for_button8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RecyclerView" />
+            <Button
+                android:id="@+id/for_button9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="刮刮卡" />
+            <Button
+                android:id="@+id/for_button10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="超级手电筒" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

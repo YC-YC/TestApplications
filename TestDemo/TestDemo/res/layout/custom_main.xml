@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 添加命名空间 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.example.testdemo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.example.testdemo.Topbar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        custom:leftBackground="@drawable/ic_launcher"
+        custom:leftText="Back"
+        custom:leftTextColor="#FFFFFF"
+        custom:rightBackground="@drawable/ic_launcher"
+        custom:rightText="More"
+        custom:rightTextColor="#FFFFFF"
+        custom:title="自定义标题"
+        custom:titleTextColor="#123412"
+        custom:titleTextSize="10sp" >
+    </com.example.testdemo.Topbar>
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.arcmenu.ArcMenu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:arcmenu="http://schemas.android.com/apk/res/com.example.testdemo"
+    android:id="@+id/right_bottom_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    arcmenu:arcradius="180dp"
+    arcmenu:position="right_bottom" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/composer_button" >
+
+        <ImageView
+            android:id="@+id/id_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/composer_icn_plus" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/composer_camera"
+        android:tag="Camera" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/composer_music"
+        android:tag="Music" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/composer_place"
+        android:tag="Place" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/composer_sleep"
+        android:tag="Sleep" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/composer_thought"
+        android:tag="Thought" />
+
+</com.example.arcmenu.ArcMenu>

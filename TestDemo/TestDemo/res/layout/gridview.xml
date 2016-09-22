@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:padding="4dp">
+
+   <!--  android:numColumns="3" 	//每一行显示多少列
+        android:horizontalSpacing=""	//两列之间的间距
+        android:verticalSpacing="" 	//两行之间间距
+        -->
+    
+    <GridView
+        android:id="@+id/gridView1"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="3" 
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp">
+    </GridView>
+
+</LinearLayout>

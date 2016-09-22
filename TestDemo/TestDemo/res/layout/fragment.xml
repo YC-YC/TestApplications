@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/fragment_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fragment中的TextView" />
+
+    <Button
+        android:id="@+id/fragment_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取Activity传递的参数" />
+    <Button
+        android:id="@+id/fragment_bt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="通过回调向Activity传递的参数" />
+</LinearLayout>

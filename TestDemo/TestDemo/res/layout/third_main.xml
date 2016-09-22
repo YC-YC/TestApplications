@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/thi_button1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SharedPreference" />
+
+            <Button
+                android:id="@+id/thi_button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SQLite" />
+
+            <Button
+                android:id="@+id/thi_button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="File操作" />
+
+            <Button
+                android:id="@+id/thi_button4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Spinner" />
+
+            <Button
+                android:id="@+id/thi_button5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ProgressBar" />
+            
+            <Button
+                android:id="@+id/thi_button9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SeekBar" />
+
+            <Button
+                android:id="@+id/thi_button6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="WebView" />
+            <Button
+                android:id="@+id/thi_button7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="媒体" />
+            <Button
+                android:id="@+id/thi_button8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="传感器" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
