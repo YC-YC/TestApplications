@@ -1,8 +1,7 @@
 package com.example.resources.text;
 
-import java.net.URL;
-
-import com.example.resources.R;
+import java.util.ArrayList;
+import java.util.List;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -11,6 +10,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
 import android.text.style.AbsoluteSizeSpan;
 import android.text.style.BackgroundColorSpan;
 import android.text.style.BulletSpan;
@@ -25,7 +25,13 @@ import android.text.style.SuperscriptSpan;
 import android.text.style.TypefaceSpan;
 import android.text.style.URLSpan;
 import android.text.style.UnderlineSpan;
+import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.resources.MainActivity;
+import com.example.resources.R;
+import com.example.resources.text.SpanUtils.SpanClickListener;
 
 /**
  *@Author Administrator
@@ -33,7 +39,13 @@ import android.widget.TextView;
  */
 public class TextViewLinkActivity extends Activity {
 
+	private static final String TAG = "TextViewLinkActivity";
 	private TextView mSpannableTextView;
+	private TextView tvColoredKeywd;
+	private TextView tvTopic;
+	private TextView tvTestAt;
+	private TextView tvExpression;
+
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -102,5 +114,95 @@ public class TextViewLinkActivity extends Activity {
 		ss.setSpan(new BulletSpan(BulletSpan.STANDARD_GAP_WIDTH, Color.GREEN), 0, ss.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 		
 		mSpannableTextView.setText(ss);
+		
+		initViews();
+
+		testColoredKeywd();
+		testTopic();
+		testAtUsers();
+		testExpression();
 	}
+	
+	/**
+	 * 
+	 */
+	private void testExpression() {
+		String exStr = "今天天气很好啊[呲牙],是不是应该做点什么[色]";
+		SpannableString span = null;
+		try {
+			span = SpanUtils.getExpression(this, exStr);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		Log.i(TAG, "testExpression spanstr = " + span);
+		tvExpression.setText(span);
+	}
+
+	/**
+	 * 
+	 */
+	private void testAtUsers() {
+		List<User> users = new ArrayList<User>();
+		users.add(new User(1, "好友1"));
+		users.add(new User(2, "好友2"));
+		StringBuilder sb = new StringBuilder("快来看看啊");
+		for (User u : users) {
+			sb.append("@").append(u.getName());
+		}
+		sb.append("\n");
+		Log.i(TAG, "testAtUsers sb = " + sb.toString());
+		SpannableString topicText = null;
+		topicText = SpanUtils.getUserSpan(Color.RED, sb.toString(), true,
+				new SpanClickListener<User>() {
+
+					@Override
+					public void onSpanClick(User t) {
+						Toast.makeText(TextViewLinkActivity.this, "点击了：" + t.getName(),
+								Toast.LENGTH_SHORT).show();
+					}
+				}, users);
+		Log.i(TAG, "testAtUsers spanStr = " + topicText);
+		tvTestAt.setText(topicText);
+		tvTestAt.setMovementMethod(LinkMovementMethod.getInstance());
+	}
+
+	/**
+	 * 
+	 */
+	private void testTopic() {
+		String topic = "#舌尖上的大连#四种金牌烤芝士吃法爱吃芝士的盆友不要错过了~L秒拍视频\n";
+		SpannableString topicText = null;
+
+		topicText = SpanUtils.getTopicSpan(Color.GREEN, topic, true,
+				new SpanClickListener<Topic>() {
+
+					@Override
+					public void onSpanClick(Topic t) {
+						Toast.makeText(TextViewLinkActivity.this,
+								"点击了：" + t.getTitle(), Toast.LENGTH_SHORT)
+								.show();
+					}
+				}, new Topic(1, "舌尖上的大连"));
+
+		tvTopic.setText(topicText);
+		tvTopic.setMovementMethod(LinkMovementMethod.getInstance());
+	}
+
+	/**
+	 * 关键字
+	 */
+	private void testColoredKeywd() {
+		String string = "Android一词的本义指“机器人”，同时也是Google于2007年11月5日,Android logo相关图片,Android logo相关图片(36张)\n";
+		SpannableString cardText = null;
+		cardText = SpanUtils.getKeyWordSpan(Color.BLUE, string, "Android");
+		tvColoredKeywd.setText(cardText);
+	}
+
+	private void initViews() {
+		tvColoredKeywd = (TextView) findViewById(R.id.tv_keyword_colored);
+		tvTopic = (TextView) findViewById(R.id.tv_topic);
+		tvTestAt = (TextView) findViewById(R.id.tv_test_at);
+		tvExpression = (TextView) findViewById(R.id.tv_text_expression);
+	}
+	
 }
