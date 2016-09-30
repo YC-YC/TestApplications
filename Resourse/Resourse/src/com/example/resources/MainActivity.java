@@ -15,6 +15,7 @@ import android.widget.Button;
 import com.example.customview.CustomTextViewActivity;
 import com.example.draghelper.ViewDragHelperActivity;
 import com.example.resources.drawpic.DrawActivity;
+import com.example.resources.loading.LoadingActivity;
 import com.example.resources.popupwin.PopupWindowActivity;
 import com.example.resources.popupwin.WindowUtils;
 import com.example.resources.receiver.AdminReceiver;
@@ -142,6 +143,9 @@ public class MainActivity extends Activity {
 			break;
 		case R.id.btn_testscroller:
 			startActivity(new Intent(this, ScrollActivity.class));
+			break;
+		case R.id.btn_loading:
+			startActivity(new Intent(this, LoadingActivity.class));
 			break;
 		default:
 			break;

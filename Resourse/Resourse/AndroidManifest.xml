@@ -19,7 +19,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.MainActivity" >
+        android:theme="@style/Theme.MainActivity">
         <!-- android:theme="@style/ThemeActivity" 动画切换-->
  <!-- 自定义动画切换 -->
         <activity
@@ -116,7 +116,9 @@
         </activity>
          <activity android:name="com.example.resources.text.TextViewLinkActivity" >
         </activity>
-  
+  <activity android:name="com.example.resources.loading.LoadingActivity" 
+      >
+        </activity>
         <!-- 自定义ContentProvider -->
         <provider
             android:name="com.example.resources.provider.PersonContentProvider"

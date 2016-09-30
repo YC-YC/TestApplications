@@ -38,11 +38,26 @@
             android:text="TextView格式变换" />
     </LinearLayout>
 
-    <Button
+     <LinearLayout
         android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+         <Button
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
         android:onClick="onClick_Animtation"
         android:text="动画" />
+         <Button
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:id="@+id/btn_loading"
+        android:layout_height="wrap_content"
+        android:onClick="onClick_Main"
+        android:text="动画Loading" />
+    </LinearLayout>
+    
+   
 
     <Button
         android:layout_width="fill_parent"
