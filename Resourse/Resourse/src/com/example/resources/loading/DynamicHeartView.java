@@ -73,7 +73,7 @@ public class DynamicHeartView extends View {
 		mPaint = new Paint();		
 		mPaint.setStyle(Style.STROKE);
 		mPaint.setStrokeWidth(2);
-		mPaint.setColor(Color.WHITE);
+		mPaint.setColor(Color.GREEN);
 		
 		mPath = new Path();
 		mPath.moveTo(START_POINT[0], START_POINT[1]);
