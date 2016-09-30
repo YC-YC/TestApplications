@@ -4,9 +4,13 @@
     android:layout_height="match_parent"
     android:background="@android:color/holo_orange_dark"
     android:orientation="vertical" >
-    
-    <com.example.resources.loading.SearchView 
+
+    <com.example.resources.loading.SearchView
+        android:layout_width="200dp"
+        android:layout_height="200dp" />
+
+    <com.example.resources.loading.DynamicHeartView
         android:layout_width="wrap_content"
-    android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
