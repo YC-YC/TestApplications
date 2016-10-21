@@ -5,11 +5,13 @@ package com.example.bigapps.mvp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.sax.StartElementListener;
 import android.view.View;
 
 import com.example.bigapps.R;
 import com.example.bigapps.circlemenu.CircleActivity;
 import com.example.bigapps.customview.CustomImageViewActivity;
+import com.example.bigapps.float360.FloatService;
 import com.example.bigapps.floding.MainFlodingActivity;
 import com.example.bigapps.customview.SwipeActivity;
 import com.example.bigapps.horizonlist.HorizonListActivity;
@@ -141,6 +143,10 @@ public class Modle implements IModle{
 			break;
 		case R.id.testfile:
 			mContext.startActivity(new Intent(mContext, MainOpenFileActivity.class));
+			break;
+		case R.id.floatview360:
+			Intent intent = new Intent(mContext, FloatService.class);
+			mContext.startService(intent);
 			break;
 		default:
 			break;
