@@ -3,6 +3,12 @@
 # Resourse/
 # TestDemo/
 
+# JNI
+*.so
+
+#invalied files
+*.properties
+
 # Built application files
 *.apk
 *.ap_
