@@ -55,8 +55,8 @@
         <activity android:name="com.example.drawer.SlidingDrawerActivity" />
         <activity android:name="com.example.saver.MainPreferenceActivity" />
         <activity android:name="com.example.saver.MainOpenFileActivity" />
-        
-        
+        <activity android:name="com.example.bigapps.slidedel2.LinearLayoutDelDemoActivity" />
+        <activity android:name="com.example.bigapps.slidedel2.ListViewDelDemoActivity" />
         <service android:name="com.example.bigapps.float360.FloatService"></service>
     </application>
 

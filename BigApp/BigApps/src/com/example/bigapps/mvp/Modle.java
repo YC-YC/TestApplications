@@ -22,6 +22,8 @@ import com.example.bigapps.picasso.PicassoActivity;
 import com.example.bigapps.progressbar.MainTestProgressbar;
 import com.example.bigapps.recyclerview.RecyclerViewActivity;
 import com.example.bigapps.slidedel.SlideDelActivity;
+import com.example.bigapps.slidedel2.LinearLayoutDelDemoActivity;
+import com.example.bigapps.slidedel2.ListViewDelDemoActivity;
 import com.example.bigapps.testviewpager.MainViewPager;
 import com.example.bigapps.testviewpager.MainViewPager2;
 import com.example.download.DownloadActivity;
@@ -147,6 +149,12 @@ public class Modle implements IModle{
 		case R.id.floatview360:
 			Intent intent = new Intent(mContext, FloatService.class);
 			mContext.startService(intent);
+			break;
+		case R.id.swipe_del1:
+			mContext.startActivity(new Intent(mContext, LinearLayoutDelDemoActivity.class));
+			break;
+		case R.id.swipe_del2:
+			mContext.startActivity(new Intent(mContext, ListViewDelDemoActivity.class));
 			break;
 		default:
 			break;
