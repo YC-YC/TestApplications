@@ -58,6 +58,23 @@
         <activity android:name="com.example.bigapps.slidedel2.LinearLayoutDelDemoActivity" />
         <activity android:name="com.example.bigapps.slidedel2.ListViewDelDemoActivity" />
         <service android:name="com.example.bigapps.float360.FloatService"></service>
+    
+    
+        <service
+            android:name="com.example.bigapps.accessibility.MyAccessibilityService"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_config" />
+        </service>
+        
     </application>
 
 </manifest>
