@@ -90,7 +90,9 @@
         <activity android:name="com.example.recylerview.RecyclerActivity"></activity>
         <activity android:name="com.example.guaguaka.GuaGuaActivity"></activity>
         <activity android:name="com.example.testdemo.cpp.CppActivity"></activity>
-       
+        <activity android:name="com.example.binderpool.TestBinderpoolActivity"></activity>
+        <service android:name="com.example.binderpool.BinderPoolService"></service>
+    	
         
        <!--  可通过本地浏览器启动
        	<intent-filter>

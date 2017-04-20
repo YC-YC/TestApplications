@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
+import com.example.binderpool.TestBinderpoolActivity;
 import com.example.testdemo.appshare.Hello;
 import com.example.testdemo.cpp.CppActivity;
 import com.example.testdemo.first.base.ProgressActivity;
@@ -45,6 +46,7 @@ public class FirstFragment extends Fragment implements OnClickListener{
 	private Button fir_button11;
 	private Button fir_button12;
 	private Button fir_button13;
+	private Button fir_button14;
 	private ScrollView mScrollView;
 	
 	private Context mContext;
@@ -96,6 +98,9 @@ public class FirstFragment extends Fragment implements OnClickListener{
 		
 		fir_button13 = (Button) mView.findViewById(R.id.fir_button13);
 		fir_button13.setOnClickListener(this);
+		
+		fir_button14 = (Button) mView.findViewById(R.id.fir_button14);
+		fir_button14.setOnClickListener(this);
 		
 		mScrollView = (ScrollView) mView.findViewById(R.id.scrollView);
 		mScrollView.setOnTouchListener(new OnTouchListener() {
@@ -190,6 +195,9 @@ public class FirstFragment extends Fragment implements OnClickListener{
 		case R.id.fir_button13:
 			int count = 6/0;
 			break;	
+		case R.id.fir_button14:
+			startActivity(new Intent(mContext, TestBinderpoolActivity.class));
+			break;
 		default:
 			break;
 		}

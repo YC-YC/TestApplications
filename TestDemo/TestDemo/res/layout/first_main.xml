@@ -95,6 +95,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Test Bugly Crash" />
+            <Button
+                android:id="@+id/fir_button14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Test BinderPool" />
         </LinearLayout>
     </ScrollView>
 
